@@ -12,6 +12,10 @@ This repo contains:
 - Option to expand and see **all class probabilities**.
 - Uses `encoder.pkl` for class names (fallback available if missing).
 
+## 📂 Dataset
+Dataset is not included in this repo (to save space).  
+You can access it from Google Drive: [Flower Dataset (ZIP)](https://drive.google.com/file/d/1RPBLceezEUPWwn1B4e2BnPj5bQbxKRT8/view?usp=sharing)
+
 ## 🛠️ How to Run the App
 1. Install dependencies:
    ```bash
