@@ -1,32 +1,33 @@
-# 🌸 Flower Classification App
+# 🌸 Flower Classification with Transfer Learning
 
-This project classifies flowers using **Convolutional Neural Networks (CNNs)**.  
-It contains two models:
-- **baseline.ipynb** → simple CNN (reference model).  
-- **model_modified.ipynb** → improved version with data augmentation and deeper architecture.
+This repo contains:
+- **baseline.ipynb** → baseline implementation (adapted from [AmanxAI Blog](https://amanxai.com/2020/11/24/flower-recognition-with-python/))  
+- **model modified.ipynb** → modified version with my own improvements and experiments  
+- **app.py** → Streamlit web app for testing the trained model  
 
----
+## ⚙️ Features (App)
+- Upload one or multiple images (`.jpg`, `.jpeg`, `.png`).
+- Model outputs **Top-1 prediction** with confidence and progress bar.
+- Shows **Top-k predictions** (default = 3).
+- Option to expand and see **all class probabilities**.
+- Uses `encoder.pkl` for class names (fallback available if missing).
 
-## 📂 Dataset
-The dataset is not stored in this repo (too large).  
-👉 Download here: [Dataset.zip](https://drive.google.com/file/d/1RPBLceezEUPWwn1B4e2BnPj5bQbxKRT8/view?usp=sharing)  
-After download, extract it into a folder named `dataset/`.
-
----
-
-## ⚙️ How to Run
+## 🛠️ How to Run the App
 1. Install dependencies:
    ```bash
-   pip install tensorflow keras numpy pandas matplotlib scikit-learn opencv-python seaborn
-2. Open either notebook in Jupyter/Colab:
-   baseline.ipynb
-   model_modified.ipynb
+   pip install streamlit tensorflow keras pillow numpy joblib
 
-   📊 Notes
-   Baseline = adapted from tutorial.
-   Modified = my own improvement (better accuracy + evaluation).
+2. Make sure these files are in the repo:
+- app.py
+- best_model_transfer.keras (your trained model)
+- encoder.pkl (class label encoder)
+
+3. Run the app:
+   ```bash
+   streamlit run app.py
 
 📖 Reference
-[Flower Recognition with Python – AmanxAI Blog](https://amanxai.com/2020/11/24/flower-recognition-with-python/#google_vignette)
+Flower Recognition with Python – AmanxAI Blog (https://amanxai.com/2020/11/24/flower-recognition-with-python/)
 
-👩‍💻 Author: Haifa Nisa Anwari
+Author: Haifa Nisa Anwari
+
